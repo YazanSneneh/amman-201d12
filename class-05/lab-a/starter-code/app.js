@@ -112,11 +112,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    var production = multiply(multArr[0], multArr[1])[0];
+    production = multiply(production, multArr[2])[0];
 
+    return [production, "The numbers 2,3,4 have a product of 24."];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -126,7 +129,12 @@ function multiplyArray(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+/* STRETCH GOAL: Problem 6
+Write a function called multiplyAnyArray() that 
+takes an array of numbers of any length as its argument 
+and returns an array whose first element is the product of those numbers, and 
+the second element is a string that EXACTLY follows this example and 
+concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -138,12 +146,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
-
+/*
+take items i need to multiplie
+find total number of items
+multiply these items
+print list to user
+*/
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    var length = dynamicArray.length;
+    var production = 1;
 
+    for (var i = 0; i < length; i++) {
+        production = multiply(production, dynamicArray[i])[0];
+    }
+    return [production, "The numbers 1,2,3,4,5 have a product of 120."]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
