@@ -159,7 +159,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     for (var i = 0; i < length; i++) {
         production = multiply(production, dynamicArray[i])[0];
     }
-    return [production, "The numbers 1,2,3,4,5 have a product of 120."]
+    return [production, "The numbers 1,2,3,4,5 have a product of 120."];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
