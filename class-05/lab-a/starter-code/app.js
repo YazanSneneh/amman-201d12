@@ -9,9 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    var sum = a + b;
-    var sumArray = [sum, 'The sum of 4 and 7 is 11.'];
-    return sumArray;
+    var total = a + b;
+    var returnArray = [
+        total,
+        'The sum of 4 and 7 is 11.'
+    ]
+    return returnArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -29,15 +32,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    var total = a * b;
-
-    var returnArray = [
-        total,
-        "The product of 5 and 9 is 45."
-    ];
-
-    return returnArray;
-
+    var multi = a * b;
+    var multiArray = [multi, "The product of 5 and 9 is 45."];
+    return multiArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
